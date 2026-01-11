@@ -81,7 +81,7 @@ export default function Home() {
       if (!loc || !loc.trim()) throw new Error('Please enter a location')
       if (!allergies || allergies.length === 0) throw new Error('Please enter allergies')
 
-      const response = await fetch('http://127.0.0.1:8001/api/check-risk-stream', {
+      const response = await fetch('https://respiroguard.onrender.com/api/check-risk-stream', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
