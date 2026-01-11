@@ -29,9 +29,7 @@ app = FastAPI(title="Allergy Prevention Agent API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:3000",                      # Local development
-        "https://allergy-agent-capstone.vercel.app",  # <--- REPLACE WITH YOUR VERCEL URL
-        "https://your-project.vercel.app"             # Add others if needed
+        "*"  # <--- REPLACE WITH YOUR VERCEL URL             # Add others if needed
     ],
     allow_credentials=True,
     allow_methods=["*"],
